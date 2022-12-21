@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  fastapi:
+    build: fastapiproject
+
+    ports:
+      - 8080:8080
+
+
+  vue:
+    build: untitled
+    network_mode: host
+    depends_on:
+      - fastapi
